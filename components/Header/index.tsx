@@ -38,7 +38,7 @@ export default function Header() {
 
   return (
     <HeaderWrapper isShowHeader={isShow} className='flex justify-between items-center p-6 fixed top-0 left-0 w-full'>
-        <div className='mr-auto font-bold'>SCASS</div>
+        <a href={`#${sectionsTitle[0]}`} className='mr-auto font-bold'>SCASS</a>
         <ul className="sectionWrapper flex justify-around">
             { buttonItem }
         </ul>
