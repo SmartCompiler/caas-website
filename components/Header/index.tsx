@@ -30,9 +30,10 @@ export default function Header() {
             key={`buttonItem_${index}`}
             selectedSection={selectedSection}
             itemTitle={btnTitle}
-            onClick={ () => setSelectedSection(btnTitle)}
         >
-            <a href={`#${btnTitle}`} className="sectionButton">{ btnTitle }</a>
+            <a
+             onClick={ () => setSelectedSection(btnTitle)}
+             href={`#${btnTitle}`} className="sectionButton">{ btnTitle }</a>
         </HeaderBtnLi>
     ))
 
