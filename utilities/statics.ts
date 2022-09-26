@@ -11,3 +11,15 @@ export const sectionsTitle:sectionsArrayType = [
     'Vision',
     'Contact Us'
 ] 
+
+export const companyDetails = {
+    tel: '123-456-789',
+    email: 'info@mysite.com',
+    address: [
+        '500 Terry Francios St',
+        'Sanfransisco, CA 94158'
+    ],
+    socials: {
+        github: 'https://github.com/SmartCompiler'
+    }
+}

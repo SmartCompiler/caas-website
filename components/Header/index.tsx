@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { sectionsTitle } from '../../utilities/statics'
 import { HeaderBtnLi, HeaderWrapper } from './style'
 
-export default function Header() {
-    const [ selectedSection, setSelectedSection ] = useState<typeof sectionsTitle[number]>(sectionsTitle[0])
+interface HeaderInt {
+  selectedSection: typeof sectionsTitle[number] 
+  setSelectedSection: React.Dispatch<React.SetStateAction<"Home" | "Features" | "Vision" | "Contact Us">>
+}
+
+export default function Header({selectedSection, setSelectedSection}: HeaderInt) {
     const [ isShow, setIsShow ] = useState(true)
     const [ lastScrollY, setLastScrollY ] = useState(0)
     

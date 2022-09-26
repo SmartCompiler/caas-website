@@ -10,6 +10,8 @@
     --color-bg-dark: #1E1E1E;
     --color-white: #fff;
     --color-gray: #707070;
+    --size-header-height: 4.5rem;
+    --size-footer-height: 13rem;
   } 
 }
 
@@ -27,6 +29,10 @@ a {
   color: inherit;
   text-decoration: none;
   
+}
+
+#_next{
+  height: 100%;
 }
 
 * {

@@ -12,6 +12,13 @@ module.exports = {
         bg_dark: 'var(--color-bg-dark)',
         white: 'var(--color-white)',
         gray: 'var(--color-gray)'
+      },
+      margin: {
+        header: 'var(--size-header-height)',
+        footer: 'var(--size-footer-height)'
+      },
+      height: {
+        footer: 'var(--size-footer-height)'
       }
     },
   },
