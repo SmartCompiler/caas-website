@@ -27,5 +27,6 @@ export const companyDetails = {
 export const medias = {
     icons: {
         gitHub: '/icons/GitHub.svg'
-    }
+    },
+    landing: '/landing.svg'
 }

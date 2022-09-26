@@ -12,8 +12,8 @@ export interface BaseFooterInt {
 export default function Footer({selectedSection, setSelectedSection}: BaseFooterInt) {
 
   return (
-    <footer className='grid grid-cols-4 grid-rows-1 w-full h-footer absolute bottom-0 px-6 '>
-        
+    <footer className='grid grid-cols-4 grid-rows-1 w-full mt-10 h-footer px-6 '>
+
         <Details />
         
         <SectionsLinks selectedSection={selectedSection} setSelectedSection={setSelectedSection} />
