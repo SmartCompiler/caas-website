@@ -1,5 +1,5 @@
 import React from 'react'
-import { companyDetails } from '../../utilities/statics'
+import { companyDetails, medias } from '../../utilities/statics'
 
 export default function Socials() {
   return (
@@ -9,7 +9,7 @@ export default function Socials() {
             <ul className='w-full '>
                 <li className='w-8 h-8'>
                     <a target={'_blank'} href={companyDetails.socials.github}>
-                        <img className='w-full h-full' src="/icons/GitHub.svg" />
+                        <img className='w-full h-full' src={ medias.icons.gitHub } />
                     </a>
                 </li>
             </ul>

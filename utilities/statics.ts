@@ -22,4 +22,10 @@ export const companyDetails = {
     socials: {
         github: 'https://github.com/SmartCompiler'
     }
+} as const
+
+export const medias = {
+    icons: {
+        gitHub: '/icons/GitHub.svg'
+    }
 }
