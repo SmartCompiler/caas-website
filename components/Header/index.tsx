@@ -44,7 +44,7 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
   return (
     <HeaderWrapper isShowHeader={isShow} className='items-center p-6 fixed top-0 left-0 w-full'>
       <div className='container mx-auto flex justify-between items-center'>
-        <a href={`#${sectionsTitle[0]}`} className='mr-auto font-bold'>SCASS</a>
+        <a onClick={ () => setSelectedSection(sectionsTitle[0])} href={`#${sectionsTitle[0]}`} className='mr-auto font-bold'>SCASS</a>
         <ul className="sectionWrapper flex justify-around">
             { buttonItem }
         </ul>
