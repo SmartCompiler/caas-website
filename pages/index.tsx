@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     return (
         <>
             <Header selectedSection={selectedSection} setSelectedSection={setSelectedSection} />
-            <main className="h-full w-full">
+            <main>
                 <Landing />
             </main>
             <Footer selectedSection={selectedSection} setSelectedSection={setSelectedSection} />

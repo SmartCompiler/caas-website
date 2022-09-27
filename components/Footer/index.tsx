@@ -3,6 +3,7 @@ import { sectionsTitle } from '../../utilities/statics'
 import Details from './Details'
 import SectionsLinks from './SectionsLinks'
 import Socials from './Socials'
+import { FooterWrapper } from './style'
 import Subscriptions from './Subscriptions'
 
 export interface BaseFooterInt {
@@ -12,7 +13,7 @@ export interface BaseFooterInt {
 export default function Footer({selectedSection, setSelectedSection}: BaseFooterInt) {
 
   return (
-    <footer className='grid grid-cols-4 grid-rows-1 w-full mt-10 h-footer px-6 '>
+    <FooterWrapper className='container mx-auto flex flex-col md:grid grid-cols-4 h-footer grid-rows-1  mt-10 px-4'>
 
         <Details />
         
@@ -22,6 +23,6 @@ export default function Footer({selectedSection, setSelectedSection}: BaseFooter
 
         <Socials />
 
-    </footer>
+    </FooterWrapper>
   )
 }

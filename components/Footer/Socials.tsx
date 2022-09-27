@@ -3,7 +3,7 @@ import { companyDetails, medias } from '../../utilities/statics'
 
 export default function Socials() {
   return (
-    <div className="socials flex flex-col items-start">
+    <div className="socials flex flex-col items-start justify-self-end">
         <div className='w-full flex flex-col items-start'>
             <span>Follow Us On:</span>
             <ul className='w-full '>

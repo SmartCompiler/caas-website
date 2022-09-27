@@ -17,6 +17,10 @@ module.exports = {
         header: 'var(--size-header-height)',
         footer: 'var(--size-footer-height)'
       },
+      padding: {
+        header: 'var(--size-header-height)',
+        footer: 'var(--size-footer-height)'
+      },
       height: {
         footer: 'var(--size-footer-height)'
       }

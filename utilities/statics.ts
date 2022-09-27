@@ -28,5 +28,15 @@ export const medias = {
     icons: {
         gitHub: '/icons/GitHub.svg'
     },
-    landing: '/landing.svg'
+    landing: '/landing.svg',
+    landingCodeDemo: "/demo.gif"
 }
+
+export const StaticMessges =  {
+    landing: {
+        title: 'Smart Compiler as a Service',
+        description: 'Next generation of multi-purpose cloud compilers',
+        button: 'LearnMore'
+    }
+} as const
+
