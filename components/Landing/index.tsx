@@ -6,7 +6,7 @@ import { LandingWrapper } from './style'
 
 export default function Landing() {
   return (
-    <LandingWrapper id={sectionsTitle[0]} className='w-full pt-20'>
+    <LandingWrapper id={sectionsTitle[0]} className='w-full pt-20 mb-28'>
 
       <div className='container mx-auto flex flex-col items-start'>
 

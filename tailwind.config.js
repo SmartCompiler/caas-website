@@ -6,12 +6,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      borderWidth:{
+        1: '1px'
+      },
       colors: {
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
         bg_dark: 'var(--color-bg-dark)',
         white: 'var(--color-white)',
-        gray: 'var(--color-gray)'
+        gray: 'var(--color-gray)',
+        gray_light: 'var(--color-gray-light)'
       },
       margin: {
         header: 'var(--size-header-height)',
