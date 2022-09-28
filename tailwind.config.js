@@ -26,7 +26,7 @@ module.exports = {
         footer: 'var(--size-footer-height)'
       },
       height: {
-        footer: 'var(--size-footer-height)'
+        footer: 'var(--size-footer-height)',
       }
     },
   },
