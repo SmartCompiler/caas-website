@@ -7,12 +7,14 @@ export default function Features() {
     
     const featurItems = StaticMessges.features.featureItem.map(( item, index ) => {
         const left_row_start = index === 0 ? 1 : 3
-        const right_row_start = index === 2 ? 2 : 3
+        const right_row_start = index === 2 ? 2 : 4
 
         const row_start = index < 2 ? left_row_start : right_row_start
 
-        const left_or_right_row_end = index < 2 ? 4 : 5 
-        const row_end = index === 0 || index === 2  ? 3 : left_or_right_row_end
+        const left_or_right_row_last = index < 2 ? 5 : 6 
+        const left_or_right_row_first = index < 2 ? 3 : 4 
+        
+        const row_end = index === 0 || index === 2  ? left_or_right_row_first : left_or_right_row_last
 
         const col_start = index < 2 ? 1 : 2
         const col_end = index < 2 ? 2 : 3

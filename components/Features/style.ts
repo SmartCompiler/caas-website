@@ -8,7 +8,7 @@ export const FeaturesDescWrapper = styled.div`
     background-size: cover;
 `
 export const FeatureItemContainer = styled.ul`
-    grid-template-rows: 3rem repeat(2, auto) 3rem;
+    grid-template-rows: 3rem auto 3rem auto 3rem;
     grid-template-columns: repeat(2, auto);
     grid-row-gap: 10px;
     grid-column-gap: 30px;
