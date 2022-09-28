@@ -19,6 +19,7 @@ export default function Features() {
         const col_start = index < 2 ? 1 : 2
         const col_end = index < 2 ? 2 : 3
         return <FeatureItem 
+                    key={ 'feature_item' + index }
                     col_end={col_end}
                     col_start={col_start}
                     row_start={row_start}

@@ -1,0 +1,23 @@
+import React, { useEffect, useRef, useState } from 'react'
+import { StaticMessges } from '../../utilities/statics'
+import StaticItem from './StaticItem'
+
+interface StatisticContainerInterface {
+    isVisited: boolean
+}
+export default function StaticsContainer({ isVisited }:StatisticContainerInterface) {
+    const statisticItems = StaticMessges.statistices.items.map( (item, index) => (
+        <StaticItem 
+            isVisited={isVisited}
+            key={'statistice_'+ index } 
+            count={item.count} 
+            title={item.title} 
+            unit={item.unit} 
+            />
+    ))
+  return (
+    <div className='container flex justify-around items-center'>
+        { statisticItems }
+    </div>
+  )
+}

@@ -35,7 +35,8 @@ export const medias = {
     landing: '/landing.svg',
     landingCodeDemo: "/demo.gif",
     features: '/features.svg',
-    vision: '/Vision.svg'
+    vision: '/Vision.svg',
+    statistics: '/statistics.svg'
 }
 
 export const StaticMessges =  {
@@ -77,6 +78,36 @@ export const StaticMessges =  {
     vision: {
         title: 'Micro-architecture aware',
         descripiton: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+    },
+    statistices: {
+        title: 'We Take Pride in Our Numbers',
+        items: [
+            {
+                count: 15,
+                unit: '',
+                title: 'Years of experience'
+            },
+            {
+                count: 10,
+                unit: 'K',
+                title: 'Business Partners'
+            },
+            {
+                count: 25,
+                unit: 'M',
+                title: 'Users'
+            },
+            {
+                count: 22,
+                unit: '',
+                title: 'Countries'
+            },
+            {
+                count: 5,
+                unit: '',
+                title: 'Industry Awards'
+            }
+        ]
     }
 } as const
 
