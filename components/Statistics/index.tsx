@@ -19,7 +19,7 @@ export default function Statistics() {
         if( statisticRef.current ) observer.observe(statisticRef.current)
     }, [])
   return (
-    <StatisticsWrapper ref={statisticRef} className='w-full flex flex-col items-center justify-start mb-28 h-96'>
+    <StatisticsWrapper ref={statisticRef} className='w-full flex flex-col items-center justify-start mb-28 pt-4'>
         <div className='text-gray_light mx-auto text-2xl mb-6'>{ StaticMessges.statistices.title }</div>
         <StaticsContainer isVisited={isComponentVisited} />
     </StatisticsWrapper>
