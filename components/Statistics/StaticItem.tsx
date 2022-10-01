@@ -14,7 +14,7 @@ export default function StaticItem({ isVisited, title, count, unit }: StaticItem
 
         let setTimeoutCounter:NodeJS.Timeout | undefined;
 
-        if( itemsCount < count ) setTimeoutCounter = setTimeout( () => setItemsCounts( prev => prev + 1 ), 100)
+        if( itemsCount < count ) setTimeoutCounter = setTimeout( () => setItemsCounts( prev => prev + 1 ), 80)
 
         if( itemsCount >= count && setTimeoutCounter ) clearTimeout(setTimeoutCounter)
 

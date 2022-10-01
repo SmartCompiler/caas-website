@@ -9,10 +9,11 @@ export const FeaturesDescWrapper = styled.div`
 `
 export const FeatureItemContainer = styled.ul`
     grid-template-rows: 3rem auto 3rem auto 3rem;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, minmax(auto, 40%));
     grid-row-gap: 10px;
     grid-column-gap: 30px;
     margin-top: -2rem;
+    justify-content: center;
 `
 
 interface featureItemWrapperInterface {
