@@ -11,3 +11,4 @@ export const mediaQueries = {
     xl: 1280,
     "2xl": 1536 
 }
+

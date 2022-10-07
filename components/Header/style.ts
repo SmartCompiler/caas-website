@@ -28,3 +28,20 @@ export const HeaderBtnLi = styled.li<HeaderBtnLiInterface>`
         width: ${ props => props.selectedSection === props.itemTitle ? '100%' : '0'};
     }
 `
+
+interface ResponsiveSidebarInt {
+  isSidebarOpen: boolean
+}
+export const HamburgerIconWrapper = styled.svg<ResponsiveSidebarInt>`
+    transform: translateX(${prop => prop.isSidebarOpen ? '200%' : '0' });
+    transition: all .3s;
+`
+
+export const CloseSidebarIconWrapper = styled.div<ResponsiveSidebarInt>`
+    transform: translateX(${prop => prop.isSidebarOpen ? '0' : '200%' });
+    transition: all .3s;
+`
+export const ResponsiveSidebarWrapper = styled.div<ResponsiveSidebarInt>`
+    transform: translateX(${prop => prop.isSidebarOpen ? '0' : '-200%' });
+    transition: all .3s;
+`

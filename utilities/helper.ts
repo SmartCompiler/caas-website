@@ -1,0 +1,1 @@
+export const checkMinMaxMediaQuery = (size:number,type: 'min'|'max' ) => window.matchMedia(`(${type}-width: ${size}px)`).matches
