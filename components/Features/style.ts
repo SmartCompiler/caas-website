@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../utilities/configs";
 import { medias } from "../../utilities/statics";
 
 
@@ -14,6 +15,12 @@ export const FeatureItemContainer = styled.ul`
     grid-column-gap: 30px;
     margin-top: -2rem;
     justify-content: center;
+
+    @media only screen and (max-width: ${mediaQueries.md}px) {
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        grid-column-gap: 5px;
+
+    }
 `
 
 interface featureItemWrapperInterface {
