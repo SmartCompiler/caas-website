@@ -19,9 +19,12 @@ export default function Statistics() {
         if( statisticRef.current ) observer.observe(statisticRef.current)
     }, [])
   return (
-    <StatisticsWrapper ref={statisticRef} className='w-full flex flex-col items-center justify-start mb-28 pt-4'>
-        <div className='text-gray_light mx-auto text-2xl mb-6'>{ StaticMessges.statistices.title }</div>
+    <StatisticsWrapper ref={statisticRef} className='relative h-auto sm:h-96 w-full flex flex-col items-center justify-start mb-10 sm:mb-28 pt-4'>
+        <div className='text-gray_light mx-auto text-xl sm:text-2xl mb-6'>{ StaticMessges.statistices.title }</div>
         <StaticsContainer isVisited={isComponentVisited} />
+        <div className='w-full h-40 sm:h-64 overflow-hidden flex justify-center items-end'>
+          <img src={medias.statistics} className="object-cover w-full h-full" alt="dotted line network" />
+        </div>
     </StatisticsWrapper>
   )
 }

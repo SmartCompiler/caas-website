@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     return (
         <>
             <Header selectedSection={selectedSection} setSelectedSection={setSelectedSection} />
-            <main>
+            <main className="overflow-x-hidden">
                 <Landing />
                 <Features />
                 <Vision />

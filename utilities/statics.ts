@@ -21,7 +21,8 @@ export const companyDetails = {
     ],
     socials: {
         github: 'https://github.com/SmartCompiler'
-    }
+    },
+    copyright: '@ 2023 SCAAS'
 } as const
 
 export const medias = {

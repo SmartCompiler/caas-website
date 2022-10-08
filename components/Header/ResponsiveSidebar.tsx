@@ -21,7 +21,7 @@ export default function ResponsiveSidebar({isOpen, currentSection, setSelectedSe
         </li>
     ))
   return (
-    <ResponsiveSidebarWrapper isSidebarOpen={isOpen} className='fixed z-20 top-0 left-0 h-full w-5/6 bg-bg_dark flex p-4'>
+    <ResponsiveSidebarWrapper isSidebarOpen={isOpen} className='fixed z-20 top-0 left-0 h-full w-3/6 bg-bg_dark flex p-4'>
         <ul className='flex flex-col justify-start items-start py-6'>
             {
                 buttonItem

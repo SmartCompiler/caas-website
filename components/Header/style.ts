@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { mediaQueries } from '../../utilities/configs';
 import { sectionsTitle } from '../../utilities/statics'
 
 interface HeaderWrapperInterface {
@@ -8,6 +9,10 @@ export const HeaderWrapper = styled.header<HeaderWrapperInterface>`
 transition: all .3s;
 transform: translateY(${ props => props.isShowHeader ? '0' : "-200%"});
 background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+
+    @media screen and (max-width: ${mediaQueries.sm}px) {
+        background: transparent ;
+    }
 `
 
 interface HeaderBtnLiInterface {

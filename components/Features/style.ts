@@ -7,6 +7,7 @@ export const FeaturesDescWrapper = styled.div`
     background: url(${medias.features});
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
 `
 export const FeatureItemContainer = styled.ul`
     grid-template-rows: 3rem auto 3rem auto 3rem;
@@ -21,6 +22,11 @@ export const FeatureItemContainer = styled.ul`
         grid-column-gap: 5px;
 
     }
+
+    @media only screen and (max-width: ${mediaQueries.md}px) {
+        display: flex;
+        flex-wrap: wrap;
+    } 
 `
 
 interface featureItemWrapperInterface {
@@ -33,5 +39,12 @@ interface featureItemWrapperInterface {
 export const FeatureItemWrapper = styled.li<featureItemWrapperInterface>`
     grid-column: ${props => props.col_start}/${props=> props.col_end};
     grid-row: ${props => props.row_start}/${props=> props.row_end};
+
+    @media only screen and (max-width: ${mediaQueries.md}px) {
+        width: 49%;
+    } 
 `
 
+export const FeatureWrapper = styled.section`
+    transform: translateY( -4rem );
+`

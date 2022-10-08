@@ -13,10 +13,11 @@ export default function StaticsContainer({ isVisited }:StatisticContainerInterfa
             count={item.count} 
             title={item.title} 
             unit={item.unit} 
+            index={index}
             />
     ))
   return (
-    <div className='container flex justify-around items-center'>
+    <div className='container flex justify-start md:justify-around items-end flex-wrap md:flex-nowrap'>
         { statisticItems }
     </div>
   )

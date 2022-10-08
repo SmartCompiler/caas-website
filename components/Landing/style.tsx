@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../utilities/configs";
 import { medias } from "../../utilities/statics";
 
 export const LandingWrapper = styled.section`
@@ -7,5 +8,9 @@ export const LandingWrapper = styled.section`
     background-size: cover;
     height: calc( 100vh - 10rem );
     background-position: center;
+
+    @media only screen and (max-width: ${mediaQueries.sm}px) {
+        height: calc( 100vh - 1rem ) !important;
+    }
     
 `

@@ -18,7 +18,7 @@ export default function SectionsLinks({selectedSection, setSelectedSection}: Bas
     ))
 
   return (
-    <ul className="Navigations flex flex-col items-start">
+    <ul className="Navigations flex flex-col sm:items-start md:row-start-1 col-start-3 md:col-start-2 col-span-1 md:col-span-auto">
         { sectionBtns }
     </ul>
   )
