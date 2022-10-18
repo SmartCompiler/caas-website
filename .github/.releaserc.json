@@ -14,7 +14,6 @@
         "releaseRules": [
           { "type": "docs", "release": "patch" },
           { "type": "refactor", "scope": "core-*", "release": "minor" },
-          { "type": "minor", "release": "minor" },
           { "type": "major", "release": "major" },
           { "type": "refactor", "release": "patch" },
           { "scope": "no-release", "release": false }
