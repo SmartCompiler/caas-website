@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import CommingSoon from './CommingSoon'
 import InstallLinux from './InstallLinux'
-import { ModalbackgroundWrapper, ModalContainer, ModalTabs } from './style'
+import { ModalbackgroundWrapper, ModalContainer, ModalTabsContainer } from './style'
 import TabButton from './TabButton'
 
 export type tabButtonTypes = 'linux'|'mac'|'windows'|'android'|'ios'|'web'
@@ -39,12 +39,16 @@ export default function InstallModal() {
     
 
     const tabs = tabsData.map( (tabItem, index) => <TabButton key={index} currentTab={currentTab} setCurrentTab={setCurrentTab} title={tabItem.title} /> )
+    const currentComponentData = tabsData.find( tabItem => currentTab === tabItem.title )
+
   return (
     <ModalbackgroundWrapper>
         <ModalContainer>
-            <ModalTabs className='flex justify-start items-start'>
+            <ModalTabsContainer className='flex justify-start items-start'>
                 { tabs }
-            </ModalTabs>
+            </ModalTabsContainer>
+    
+            { currentComponentData?.component }
         </ModalContainer>
     </ModalbackgroundWrapper>
   )

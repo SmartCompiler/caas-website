@@ -15,7 +15,7 @@ align-items: center;
 
 export const ModalContainer = styled.div`
 border-radius: 10px;
-width: 70vw;
+width: clamp(50vw, 70vw, 60rem);
 height: clamp(auto, auto, 80vh);
 display: flex;
 flex-direction: column;
@@ -26,7 +26,7 @@ border: 1px solid #4D4D4D;
 background: var(--color-bg-dark);
 `
 
-export const ModalTabs = styled.div`
+export const ModalTabsContainer = styled.div`
     
 `
 
@@ -52,4 +52,18 @@ export const TabButtonItem = styled.button<TabButtonItem>`
         background: var(--color-primary);
         transition: all .2s;
     }
+`
+
+export const MainContentWrapper = styled.div`
+    min-height: 50vh;
+    padding-left: 1rem;
+    padding-top: 2rem;
+`
+
+export const CodeContainer = styled.div`
+    background: var(--color-gray);
+    border-radius: 5px;
+    padding: .5rem;
+    margin-left: 13px;
+    border: 1px solid #4D4D4D;
 `
