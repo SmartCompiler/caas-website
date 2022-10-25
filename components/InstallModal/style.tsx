@@ -67,3 +67,9 @@ export const CodeContainer = styled.div`
     margin-left: 13px;
     border: 1px solid #4D4D4D;
 `
+
+export const CopiedToClipboadMessage = styled.span`
+    position: absolute;
+    bottom: 110%;
+    right: -2px;
+`

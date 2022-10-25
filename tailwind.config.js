@@ -15,7 +15,8 @@ module.exports = {
         bg_dark: 'var(--color-bg-dark)',
         white: 'var(--color-white)',
         gray: 'var(--color-gray)',
-        gray_light: 'var(--color-gray-light)'
+        gray_light: 'var(--color-gray-light)',
+        gray_lighter: 'var(--color-gray-lighter)'
       },
       margin: {
         header: 'var(--size-header-height)',

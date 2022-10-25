@@ -41,6 +41,9 @@ export const medias = {
 }
 
 export const StaticMessges =  {
+    global: {
+        copyClipboad: 'copied to your clipboad'
+    },
     landing: {
         title: 'Smart Compiler as a Service',
         description: 'Next generation of multi-purpose cloud compilers',
@@ -114,4 +117,31 @@ export const StaticMessges =  {
 
 export const links = {
     articleLink : 'https://www.mdpi.com/2073-8994/14/9/1818'
+}
+
+export const ModalInstallData = {
+    linuxInstall: [
+        {
+          title: 'Step 1: Update and Upgrade the System',
+          description: 'To start off, log into your Ubuntu 18.04 system using SSH protocol and update & upgrade system repositories using the following command.',
+          code: <div><span className='mr-4'>$</span> apt update -y && apt upgrade -y</div>,
+          codeCopy: 'apt update -y && apt upgrade -y'
+        },
+        {
+          title: 'Step 2: install SCAAS',
+          description: 'To install SCAAS CLI tool run the following command.',
+          code: <div><span className='mr-4'>$</span> sudo apt install scaas</div>,
+          codeCopy: 'sudo apt install scaas'
+        },
+        {
+          title: 'Step 3: Ensure everything is ok',
+          description: 'to make sure that you installed SCASS properly run the following command.',
+          code: (<div className='flex flex-col'>
+                    <div><span className='mr-4'>$</span> scaas --version</div>
+                     <div><span className='mr-4'>$</span> scaas version 1.0</div> 
+                </div>),
+          codeCopy: 'scaas --version\
+                     scaas version 1.0'
+        }
+      ]
 }
