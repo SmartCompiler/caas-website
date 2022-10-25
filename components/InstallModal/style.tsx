@@ -34,7 +34,7 @@ export const ModalContainer = styled.div`
 
 export const ModalTabsContainer = styled.div`
     height: 2rem;
-    @media screen and (max-width: ${mediaQueries.sm}px) {
+    @media screen and (max-width: ${mediaQueries.md}px) {
         height: ${responsiveTabHeight};
     }
 `
