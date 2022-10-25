@@ -37,8 +37,8 @@ export default function StepDetails({ title, description, code, codeCopy }: Step
   return (
     <div className='flex flex-col mb-10'>
         <div className='mb-2 text-lg'>{ title }</div>
-        <p className='pl-4 mb-2 w-3/4'>{description}</p>
-        <CodeContainer className='pl-4 flex justify-between relative'>
+        <p className='pl-4 mb-2 w-full lg:w-3/4'>{description}</p>
+        <CodeContainer className='flex justify-between relative'>
             { code }
             <button className='clipBoadIcon absolute right-2' onClick={ handleClickCopyIcon }>
                 <CopiedToClipboadMessage 

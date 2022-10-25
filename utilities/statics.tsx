@@ -1,3 +1,7 @@
+import CommingSoon from "../components/InstallModal/CommingSoon"
+import InstallLinux from "../components/InstallModal/InstallLinux"
+import { tabButtonTypes } from "../types"
+
 type sectionsArrayType = [
     'Home',
     'Features',
@@ -39,6 +43,33 @@ export const medias = {
     vision: '/Vision.svg',
     statistics: '/statistics.svg'
 }
+
+export const modalTabs:{ title: tabButtonTypes, component: JSX.Element}[] = [
+    {
+        title: 'linux',
+        component: <InstallLinux />
+    },
+    {
+        title: 'mac',
+        component: <CommingSoon />
+    },
+    {
+        title: 'windows',
+        component: <CommingSoon />
+    },
+    {
+        title: 'android',
+        component: <CommingSoon />
+    },
+    {
+        title: 'ios',
+        component: <CommingSoon />
+    },
+    {
+        title: 'web',
+        component: <CommingSoon />
+    },
+]
 
 export const StaticMessges =  {
     global: {
