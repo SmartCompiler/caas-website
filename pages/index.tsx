@@ -9,18 +9,15 @@ import Vision from "../components/Vision";
 import { sectionsTitle } from "../utilities/statics";
 
 const Home: NextPage = () => {
-    const [ selectedSection, setSelectedSection ] = useState<typeof sectionsTitle[number]>(sectionsTitle[0])
 
     return (
         <>
-            <Header selectedSection={selectedSection} setSelectedSection={setSelectedSection} />
             <main className="overflow-x-hidden">
                 <Landing />
                 <Features />
                 <Vision />
                 <Statistics />
             </main>
-            <Footer selectedSection={selectedSection} setSelectedSection={setSelectedSection} />
         </>
     )
 }

@@ -2,15 +2,27 @@ import CommingSoon from "../components/InstallModal/CommingSoon"
 import InstallLinux from "../components/InstallModal/InstallLinux"
 import { tabButtonTypes } from "../types"
 
+interface routesListType {
+    home:'/', 
+    roadmap: '/roadmap'
+}
+export const routesList:routesListType = {
+    home: '/',
+    roadmap: '/roadmap'
+}
+
+export const routesTitle: {[key in keyof typeof routesList]: string} = {
+    home: 'Home',
+    roadmap: 'Roadmap'
+}
+
 type sectionsArrayType = [
-    'Home',
     'Features',
     'Vision',
     'Contact Us'
 ] 
 
 export const sectionsTitle:sectionsArrayType = [
-    'Home',
     'Features',
     'Vision',
     'Contact Us'

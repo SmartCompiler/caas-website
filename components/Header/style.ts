@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { mediaQueries } from '../../utilities/configs';
-import { sectionsTitle } from '../../utilities/statics'
+import { routesList, sectionsTitle } from '../../utilities/statics'
 
 interface HeaderWrapperInterface {
     isShowHeader: boolean
@@ -15,10 +15,17 @@ background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
     }
 `
 
+type sectionsType = typeof sectionsTitle[number]
 interface HeaderBtnLiInterface {
-    selectedSection: typeof sectionsTitle[number];
-    itemTitle: typeof sectionsTitle[number];
+    selectedSection?: sectionsType;
+    itemTitle?: sectionsType;
+    currentroute: string,
+    routeName: typeof routesList[ keyof typeof routesList ]
+
 }
+
+const isHomeAndCurrentSection = ( {currentroute,  selectedSection, itemTitle, routeName}: HeaderBtnLiInterface ) => currentroute === routeName && selectedSection === itemTitle
+const isNotHomeAndCurrentPage =  ( { currentroute, routeName }:HeaderBtnLiInterface) => currentroute !== routesList.home && currentroute === routeName
 export const HeaderBtnLi = styled.li<HeaderBtnLiInterface>`
     position: relative;
     &::after{
@@ -30,7 +37,7 @@ export const HeaderBtnLi = styled.li<HeaderBtnLiInterface>`
         height: 1px;
         transition: all .3s;
         background-color: var(--color-white);
-        width: ${ props => props.selectedSection === props.itemTitle ? '100%' : '0'};
+        width: ${ props => ( isHomeAndCurrentSection(props) || isNotHomeAndCurrentPage(props)) ? '100%' : '0'};
     }
 `
 

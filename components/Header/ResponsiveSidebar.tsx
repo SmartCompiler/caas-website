@@ -6,7 +6,7 @@ import { ResponsiveSidebarWrapper } from './style'
 interface ResponsiveSidebarInt{
     isOpen: boolean
     currentSection: typeof sectionsTitle[number]
-    setSelectedSection: React.Dispatch<React.SetStateAction<"Home" | "Features" | "Vision" | "Contact Us">>
+    setSelectedSection: React.Dispatch<React.SetStateAction<"Features" | "Vision" | "Contact Us">>
 }
 
 export default function ResponsiveSidebar({isOpen, currentSection, setSelectedSection}:ResponsiveSidebarInt) {

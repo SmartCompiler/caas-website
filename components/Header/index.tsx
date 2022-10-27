@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { mediaQueries } from '../../utilities/configs'
 import { checkMinMaxMediaQuery } from '../../utilities/helper'
-import { sectionsTitle } from '../../utilities/statics'
+import { routesList, routesTitle, sectionsTitle } from '../../utilities/statics'
 import CloseIcon from './CloseIcon'
 import HamburgerMenuIcon from './HamburgerMenuIcon'
 import ResponsiveSidebar from './ResponsiveSidebar'
 import { HeaderBtnLi, HeaderWrapper } from './style'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 interface HeaderInt {
   selectedSection: typeof sectionsTitle[number] 
-  setSelectedSection: React.Dispatch<React.SetStateAction<"Home" | "Features" | "Vision" | "Contact Us">>
+  setSelectedSection: React.Dispatch<React.SetStateAction<"Features" | "Vision" | "Contact Us">>
 }
 
 export default function Header({selectedSection, setSelectedSection}: HeaderInt) {
     const [ isShow, setIsShow ] = useState(true)
     const [ lastScrollY, setLastScrollY ] = useState(0)
     const [ isResponsiveOpen, setisResponsiveOpen ] = useState<boolean>(false)
+    const router = useRouter()
 
     useEffect( () => {
       
@@ -38,14 +41,16 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
 
     const buttonItem = sectionsTitle.map( (btnTitle, index) => (
         <HeaderBtnLi 
+            currentroute={router.pathname}
             className='ml-4' 
             key={`buttonItem_${index}`}
             selectedSection={selectedSection}
             itemTitle={btnTitle}
+            routeName={routesList.home}
         >
             <a
              onClick={ () => setSelectedSection(btnTitle)}
-             href={`#${btnTitle}`} className="sectionButton">{ btnTitle }</a>
+             href={`${routesList.home}#${btnTitle}`} className="sectionButton">{ btnTitle }</a>
         </HeaderBtnLi>
     ))
 
@@ -55,6 +60,10 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
       <div className='container mx-auto flex justify-between items-center'>
         <a onClick={ () => setSelectedSection(sectionsTitle[0])} href={`#${sectionsTitle[0]}`} className='text-xl sm:text-base mr-auto font-bold'>SCASS</a>
         <ul className="sectionWrapper hidden md:flex justify-around">
+            <HeaderBtnLi routeName={routesList.roadmap} currentroute={router.pathname}>
+              <Link href={routesList.roadmap}>{ routesTitle.roadmap }</Link>
+            </HeaderBtnLi>
+
             { buttonItem }
         </ul>
 
