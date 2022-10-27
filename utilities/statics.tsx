@@ -188,3 +188,63 @@ export const ModalInstallData = {
         }
       ]
 }
+
+export const roadmapData = [
+    {
+        title: 'Compiler phase',
+        descriptions: [
+            'Compile and link',
+            'Different levels of Optimization',
+            'User account management',
+            'Cloud space',
+            'public compiler plugin market place',
+            'Remote library management',
+            'Code advisor',
+        ]
+    },
+    {
+        title: 'Programming language',
+        descriptions: [
+            'Specific Domina Language creation made easy (New compiler frontends)',
+            'Introduce your invented language to the world',
+            'New way to created specialized compiler plugins',
+            'Compiler plugin package management'
+        ]
+    },
+    {
+        title: 'Binary and machine code generation',
+        descriptions: [
+            'Micro-architecture aware code generators',
+            'Generate machine code for the Architecture on your choice'
+        ]
+    },
+    {
+        title: 'Compiler intelligent',
+        descriptions: [
+            'Get the report of your compilation',
+            'hold the compilation history',
+            'provide intermediate representations',
+            'Enable security checks during compile',
+            'Apply AI and ML for best code practices',
+            'Data science for user attraction and error coding'
+        ]
+    },
+    {
+        title: 'Bin container and artifactory',
+        descriptions: [
+            'Private and public binary repository',
+            'binary version control on your local machine',
+            'Local version of the engine',
+            'Create plugin on partner artifactories'
+        ]
+    },
+    {
+        title: 'Cloud services',
+        descriptions: [
+            'Create a new online code',
+            'Create private code repository',
+            'CI/CD as a service on cloud(CDaaS)',
+            'Binary as a function(BaaF)'
+        ]
+    }
+]
