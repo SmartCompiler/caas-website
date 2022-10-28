@@ -53,7 +53,8 @@ export const medias = {
     landingCodeDemo: "/demo.gif",
     features: '/features.svg',
     vision: '/Vision.svg',
-    statistics: '/statistics.svg'
+    statistics: '/statistics.svg',
+    sphere: '/sphere.svg'
 }
 
 export const modalTabs:{ title: tabButtonTypes, component: JSX.Element}[] = [
