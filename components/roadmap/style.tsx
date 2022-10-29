@@ -21,3 +21,11 @@ export const LineItem = styled.line<LineItemInt>`
         }
 `
 
+interface BulletNumber{
+    top: number
+    left: number
+}
+export const BulletNumber = styled.span<BulletNumber>`
+    top: ${ props => props.top}px; 
+    left: ${ props => props.left}px; 
+`

@@ -39,7 +39,7 @@ export default function SphereInfo() {
   return (
     <section className='w-full relative flex justify-center items-center py-48'>
         <SphereContainer ref={sphereRef} className='flex justify-center items-center relative'>
-            <Image className='z-20 relative' src={medias.sphere} alt="sphere core" width={370} height={370} />
+            <Image className='z-20 relative ' draggable={false} src={medias.sphere} alt="sphere core" width={370} height={370} />
             {renderedDescriptions}
         </SphereContainer>
     </section>

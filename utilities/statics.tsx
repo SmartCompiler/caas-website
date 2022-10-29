@@ -205,7 +205,8 @@ export const roadmapData = [
         ratioPosition: {
             x: 3.6,
             y: 9.1
-        }
+        },
+        detailsPose: ['right']
     },
     {
         title: 'Programming language',
@@ -218,7 +219,8 @@ export const roadmapData = [
         ratioPosition: {
             x: 1.8,
             y: 8
-        }
+        },
+        detailsPose: ['right']
     },
     {
         title: 'Binary and machine code generation',
@@ -229,7 +231,8 @@ export const roadmapData = [
         ratioPosition: {
             x: 1.6,
             y: 3.4
-        }
+        },
+        detailsPose: ['down', 'right']
     },
     {
         title: 'Compiler intelligent',
@@ -244,7 +247,8 @@ export const roadmapData = [
         ratioPosition: {
             x: 1.7,
             y: 2.2
-        }
+        },
+        detailsPose: ['down', 'right']
     },
     {
         title: 'Bin container and artifactory',
@@ -257,7 +261,8 @@ export const roadmapData = [
         ratioPosition: {
             x: 4,
             y: 2.1
-        }
+        },
+        detailsPose: ['down', 'left']
     },
     {
         title: 'Cloud services',
@@ -270,6 +275,7 @@ export const roadmapData = [
         ratioPosition: {
             x: 4.5,
             y: 3
-        }
+        },
+        detailsPose: ['left']
     }
 ]
