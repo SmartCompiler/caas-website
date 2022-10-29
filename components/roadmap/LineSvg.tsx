@@ -34,8 +34,9 @@ export default function LineSvg({ endPoint, sphereRect }: LineSvgInt) {
         endPointBasedSvg 
     } = getMaxFirstLineAxis({startPoint, endPoint}, sphereRect)
 
-    const validationMoreIfOnTopSectionOfSphere = (isEndPointOnTopSection && endPointBasedSvg.y < maxFirstLineYAxis && startPoint.x !== endPointBasedSvg.x)
-    const validationMoreIfOnBottomSectionOfSphere = ( !isEndPointOnTopSection && endPointBasedSvg.y > maxFirstLineYAxis && startPoint.x !== endPointBasedSvg.x)
+    const isNotBetweenMaxXAxis = (endPointBasedSvg.x < maxFirstLineXAxis && endPointBasedSvg.x < startPoint.x) || (endPointBasedSvg.x > maxFirstLineXAxis && endPointBasedSvg.x > startPoint.x) 
+    const validationMoreIfOnTopSectionOfSphere = isEndPointOnTopSection && endPointBasedSvg.y < maxFirstLineYAxis && startPoint.x !== endPointBasedSvg.x && isNotBetweenMaxXAxis
+    const validationMoreIfOnBottomSectionOfSphere =  !isEndPointOnTopSection && endPointBasedSvg.y > maxFirstLineYAxis && startPoint.x !== endPointBasedSvg.x && endPointBasedSvg.x < maxFirstLineXAxis
     const isEndPointMoreThanSphereHeightAndWidth = validationMoreIfOnTopSectionOfSphere || validationMoreIfOnBottomSectionOfSphere
 
     const validationMoreIfOnTopSectionOfSphereForlessHeight = (isEndPointOnTopSection && endPointBasedSvg.y > maxFirstLineYAxis && startPoint.x !== endPointBasedSvg.x)
@@ -44,10 +45,8 @@ export default function LineSvg({ endPoint, sphereRect }: LineSvgInt) {
 
     if( isEndPointMoreThanSphereHeightAndWidth && lineType !== 'thriple' ) setLines('thriple')
     if( isEndPointLessThanSphereHeightAndLessThantWidth && lineType !== 'double' ) setLines('double')
-
    
     const linesSvg = Array.from({length: sphereConfigs.linesType[lineType]}).map((_line, index) => {
-
         let {x1, y1, x2, y2} = getLineData({startPoint, endPoint:endPointBasedSvg}, index)
 
         return <line key={index} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#F8FBF9" strokeWidth={2}></line>
