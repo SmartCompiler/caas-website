@@ -201,7 +201,11 @@ export const roadmapData = [
             'public compiler plugin market place',
             'Remote library management',
             'Code advisor',
-        ]
+        ],
+        ratioPosition: {
+            x: 3.2,
+            y: 8.5
+        }
     },
     {
         title: 'Programming language',
@@ -210,14 +214,22 @@ export const roadmapData = [
             'Introduce your invented language to the world',
             'New way to created specialized compiler plugins',
             'Compiler plugin package management'
-        ]
+        ],
+        ratioPosition: {
+            x: 1.8,
+            y: 7
+        }
     },
     {
         title: 'Binary and machine code generation',
         descriptions: [
             'Micro-architecture aware code generators',
             'Generate machine code for the Architecture on your choice'
-        ]
+        ],
+        ratioPosition: {
+            x: 1.6,
+            y: 3.1
+        }
     },
     {
         title: 'Compiler intelligent',
@@ -228,7 +240,11 @@ export const roadmapData = [
             'Enable security checks during compile',
             'Apply AI and ML for best code practices',
             'Data science for user attraction and error coding'
-        ]
+        ],
+        ratioPosition: {
+            x: 1.7,
+            y: 2.1
+        }
     },
     {
         title: 'Bin container and artifactory',
@@ -237,7 +253,11 @@ export const roadmapData = [
             'binary version control on your local machine',
             'Local version of the engine',
             'Create plugin on partner artifactories'
-        ]
+        ],
+        ratioPosition: {
+            x: 3.7,
+            y: 2.1
+        }
     },
     {
         title: 'Cloud services',
@@ -246,6 +266,10 @@ export const roadmapData = [
             'Create private code repository',
             'CI/CD as a service on cloud(CDaaS)',
             'Binary as a function(BaaF)'
-        ]
+        ],
+        ratioPosition: {
+            x: 4,
+            y: 3
+        }
     }
 ]

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { sphereConfigs } from '../../utilities/configs'
+import { SphereRectInt } from './SphereInfo'
 
 type axisTypeObject = {
     x: number,
@@ -7,7 +8,7 @@ type axisTypeObject = {
 }
 interface LineSvgInt {
     endPoint: axisTypeObject | undefined,
-    sphereRect: DOMRect | undefined
+    sphereRect: SphereRectInt | undefined
 }
 
 type lineTypes = keyof typeof sphereConfigs.linesType
@@ -24,7 +25,6 @@ export default function LineSvg({ endPoint, sphereRect }: LineSvgInt) {
         }
         setStartPoint(startPoint)
     }, [sphereRect])
-
     if( !sphereRect || !startPoint || !endPoint ) return <></>
     
     const { 
@@ -49,7 +49,7 @@ export default function LineSvg({ endPoint, sphereRect }: LineSvgInt) {
     const linesSvg = Array.from({length: sphereConfigs.linesType[lineType]}).map((_line, index) => {
         let {x1, y1, x2, y2} = getLineData({startPoint, endPoint:endPointBasedSvg}, index)
 
-        return <line key={index} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#F8FBF9" strokeWidth={2}></line>
+        return <line key={index} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#F8FBF9" strokeWidth={1.5}></line>
     })
 
         
@@ -129,7 +129,7 @@ export default function LineSvg({ endPoint, sphereRect }: LineSvgInt) {
 
 
 
-function getMaxFirstLineAxis({endPoint, startPoint}: {endPoint:axisTypeObject, startPoint: axisTypeObject }, sphereRect: DOMRect) {
+function getMaxFirstLineAxis({endPoint, startPoint}: {endPoint:axisTypeObject, startPoint: axisTypeObject }, sphereRect: SphereRectInt) {
     //set max y and x axis
     let maxFirstLineYAxis = sphereConfigs.maxFirstLineTop
     let maxFirstLineXAxis = sphereConfigs.maxFirstLineLeft
