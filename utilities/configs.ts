@@ -12,3 +12,21 @@ export const mediaQueries = {
     "2xl": 1536 
 }
 
+// interface sphereConfigsInt {
+//     linesType: {single:1, double:2, thriple:3}
+//     maxFirstLineTop: number,
+//     maxFirstLineLeft: number,
+//     maxFirstLineBottom: (sphereRect: DOMRect) => number,
+//     maxFirstLineRight: (sphereRect: DOMRect) => number,
+// }
+export const sphereConfigs = {
+    maxFirstLineTop: 70,
+    maxFirstLineLeft: 100,
+    maxFirstLineBottom: (sphereRect: DOMRect) => (sphereRect.height * 5.6)/ 7,
+    maxFirstLineRight: (sphereRect: DOMRect) => (sphereRect.width * 5.6)/ 7,
+    linesType: {
+        single: 1,
+        double: 2,
+        thriple: 3
+    }
+}
