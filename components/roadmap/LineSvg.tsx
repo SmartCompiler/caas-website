@@ -7,7 +7,7 @@ type axisTypeObject = {
     x: number,
     y: number
 }
-interface LineSvgInt {
+export interface LineSvgInt {
     endPoint: axisTypeObject | undefined,
     sphereRect: SphereRectInt | undefined
 }

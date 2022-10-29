@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
+import Roadmap from '../../pages/roadmap'
 import { medias, roadmapData } from '../../utilities/statics'
 import LineSvg from './LineSvg'
+import RoadmapItem from './RoadmapItem'
 import { SphereContainer } from './style'
 
 export interface SphereRectInt { 
@@ -31,7 +33,7 @@ export default function SphereInfo() {
         y: bodyRect.height / data.ratioPosition.y,
       }  : undefined
       
-      return <LineSvg key={'line_' + index} endPoint={endPoint} sphereRect={sphereRect} />
+      return <RoadmapItem index={index + 1} key={'line_' + index} data={data} endPoint={endPoint} sphereRect={sphereRect} />
     })
 
   return (
