@@ -45,7 +45,7 @@ export default function LineSvg({ endPoint, sphereRect }: LineSvgInt) {
 
     if( isEndPointMoreThanSphereHeightAndWidth && lineType !== 'thriple' ) setLines('thriple')
     if( isEndPointLessThanSphereHeightAndLessThantWidth && lineType !== 'double' ) setLines('double')
-   
+
     const linesSvg = Array.from({length: sphereConfigs.linesType[lineType]}).map((_line, index) => {
         let {x1, y1, x2, y2} = getLineData({startPoint, endPoint:endPointBasedSvg}, index)
 
@@ -56,10 +56,10 @@ export default function LineSvg({ endPoint, sphereRect }: LineSvgInt) {
     function getLineData({startPoint, endPoint}:{startPoint: axisTypeObject, endPoint: axisTypeObject}, index:number){
         let lineData = getSingleLineData(startPoint, endPoint)
 
-        //check lineType count 
         if( lineType !== 'single' && index === 0 ) lineData = notSingleLineGetMaxLineData(startPoint, endPoint)
 
-        //get max y befor height of sphere
+        if( lineType === 'double') lineData = getDoubleLineData(lineData, index)
+
         if( lineType === 'thriple') lineData = getThripleLineData(lineData, index)
 
         return lineData
@@ -76,15 +76,29 @@ export default function LineSvg({ endPoint, sphereRect }: LineSvgInt) {
 
     function notSingleLineGetMaxLineData(startPoint: axisTypeObject, endPoint: axisTypeObject) {
         let {x1, y1} = getSingleLineData(startPoint, endPoint)
-
-        const isLineTopSectionAndMaxTop = (isEndPointOnTopSection && endPoint.y <= maxFirstLineYAxis)
-        const isLineBottomSectionAndMaxBottom = (!isEndPointOnTopSection && endPoint.y >= maxFirstLineYAxis)
+        
+        const isLineTopSectionAndLessThanMaxTop = (isEndPointOnTopSection && endPoint.y <= maxFirstLineYAxis)
+        const isLineBottomSectionAndLessThanMaxBottom = (!isEndPointOnTopSection && endPoint.y >= maxFirstLineYAxis)
         return {
             x1, 
             y1,
             x2: maxFirstLineXAxis,
-            y2: (isLineTopSectionAndMaxTop || isLineBottomSectionAndMaxBottom)  ? maxFirstLineYAxis: endPoint.y
+            y2: (isLineTopSectionAndLessThanMaxTop || isLineBottomSectionAndLessThanMaxBottom)  ? maxFirstLineYAxis: endPoint.y
         }
+    }
+
+    function getDoubleLineData(lineData: {x1:number, y1:number, x2:number,y2:number}, index:number){
+
+        const isLineTopSectionAndLessThanMaxTop = (isEndPointOnTopSection && endPointBasedSvg.y <= maxFirstLineYAxis)
+        const isLineBottomSectionAndLessThanMaxBottom = (!isEndPointOnTopSection && endPointBasedSvg.y >= maxFirstLineYAxis)
+        if( index === 1 ){
+            lineData.x1 = maxFirstLineXAxis
+            lineData.y1 = (isLineTopSectionAndLessThanMaxTop || isLineBottomSectionAndLessThanMaxBottom)  ? maxFirstLineYAxis: endPointBasedSvg.y,
+            lineData.x2 = endPointBasedSvg.x
+            lineData.y2 = endPointBasedSvg.y 
+        }
+
+        return lineData
     }
 
     function getThripleLineData(lineData: {x1:number, y1:number, x2:number,y2:number}, index:number){

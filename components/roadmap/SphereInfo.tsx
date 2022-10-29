@@ -17,8 +17,8 @@ export default function SphereInfo() {
     const renderedDescriptions = roadmapData.map((data, index) => {
 
       const endPoint = bodyRect.current ? {
-        x: (bodyRect.current.width) / 4,
-        y: bodyRect.current.height / 4,
+        x: (bodyRect.current.width) / 1.4,
+        y: bodyRect.current.height / 1.8,
       }  : undefined
 
       return <LineSvg key={index} endPoint={endPoint} sphereRect={sphereRect} />
