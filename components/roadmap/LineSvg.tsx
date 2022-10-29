@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { sphereConfigs } from '../../utilities/configs'
 import { SphereRectInt } from './SphereInfo'
+import { LineItem } from './style'
 
 type axisTypeObject = {
     x: number,
@@ -49,7 +50,7 @@ export default function LineSvg({ endPoint, sphereRect }: LineSvgInt) {
     const linesSvg = Array.from({length: sphereConfigs.linesType[lineType]}).map((_line, index) => {
         let {x1, y1, x2, y2} = getLineData({startPoint, endPoint:endPointBasedSvg}, index)
 
-        return <line key={index} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#F8FBF9" strokeWidth={1.5}></line>
+        return <LineItem key={index} delay={index * 1000} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#F8FBF9" strokeWidth={1.5} ></LineItem>
     })
 
         

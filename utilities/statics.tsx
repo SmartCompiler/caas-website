@@ -203,8 +203,8 @@ export const roadmapData = [
             'Code advisor',
         ],
         ratioPosition: {
-            x: 3.2,
-            y: 8.5
+            x: 3.6,
+            y: 9.1
         }
     },
     {
@@ -217,7 +217,7 @@ export const roadmapData = [
         ],
         ratioPosition: {
             x: 1.8,
-            y: 7
+            y: 8
         }
     },
     {
@@ -228,7 +228,7 @@ export const roadmapData = [
         ],
         ratioPosition: {
             x: 1.6,
-            y: 3.1
+            y: 3.4
         }
     },
     {
@@ -243,7 +243,7 @@ export const roadmapData = [
         ],
         ratioPosition: {
             x: 1.7,
-            y: 2.1
+            y: 2.2
         }
     },
     {
@@ -255,7 +255,7 @@ export const roadmapData = [
             'Create plugin on partner artifactories'
         ],
         ratioPosition: {
-            x: 3.7,
+            x: 4,
             y: 2.1
         }
     },
@@ -268,7 +268,7 @@ export const roadmapData = [
             'Binary as a function(BaaF)'
         ],
         ratioPosition: {
-            x: 4,
+            x: 4.5,
             y: 3
         }
     }
