@@ -14,3 +14,7 @@ export const LandingWrapper = styled.section`
     }
     
 `
+
+export const CodingDemoWrapper = styled.div`
+    width: 30rem;
+`

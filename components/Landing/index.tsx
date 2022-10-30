@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { medias, sectionsTitle, StaticMessges } from '../../utilities/statics'
+import { baseHomeSection, medias, sectionsTitle, StaticMessges } from '../../utilities/statics'
 import PrimaryBtn from '../global/primaryBtn'
 import CodingDemo from './CodingDemo'
 import InstallModal from '../InstallModal'
@@ -11,7 +11,7 @@ export default function Landing() {
   return (
     <>
       <InstallModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
-      <LandingWrapper id={sectionsTitle[0]} className='w-full pt-20 mb-0 sm:mb-28 px-10'>
+      <LandingWrapper id={baseHomeSection} className='w-full pt-20 mb-0 sm:mb-28 px-10'>
 
         <div className='container mx-auto flex flex-col items-start'>
 

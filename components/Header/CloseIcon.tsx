@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { CloseSidebarIconWrapper } from "./style"
 
 interface CloseIconInt{
@@ -12,7 +13,7 @@ export default function CloseIcon( {onClickHandle, isSidebarOpen}:CloseIconInt )
       isSidebarOpen={isSidebarOpen}
       onClick={ onClickHandle } 
       className={ 'absolute top-0 right-4 flex items-center h-full md:hidden'} >
-        <img src='/Close.png' className="h-8"  alt="close" />
+        <Image width={36} height={36} src={`/Close.png`} alt="close" />
     </CloseSidebarIconWrapper>
 
   )

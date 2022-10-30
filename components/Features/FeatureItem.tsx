@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { FeatureItemWrapper } from './style'
 
@@ -20,8 +21,8 @@ export default function FeatureItem({ name, img, title, description, row_start, 
         row_end={row_end}
         className={`flex flex-col items-start justify-around p-4 bg-gray w-full shadow-black shadow-md h-auto`}
         >
-        <img className='w-10 mb-4' src={img} alt={`${name} icon`} />
-        <div className='text-primary font-semibold mb-4'>{ title }</div>
+        <Image height={45} width={45} className='w-10' src={img} alt={`${name} icon`} />
+        <div className='text-primary font-semibold my-4'>{ title }</div>
         <div className='text-sm text-gray_light mb-6'>{ description }</div>
         <hr className='w-full mx-auto h-.5 border-transparent rounded-sm bg-primary'/>
     </FeatureItemWrapper>

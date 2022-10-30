@@ -16,6 +16,8 @@ export const routesTitle: {[key in keyof typeof routesList]: string} = {
     roadmap: 'Roadmap'
 }
 
+export const baseHomeSection = 'landing'
+
 type sectionsArrayType = [
     'Features',
     'Vision',

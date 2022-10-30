@@ -31,7 +31,7 @@ export default function Features() {
                     />
 })
   return (
-    <FeatureWrapper id={sectionsTitle[1]} className='container flex flex-col-reverse md:flex-row rounded-sm mx-auto border-1 border-gray overflow-visible h-auto md:h-96 mb-0 md:mb-64 lg:mb-48 xl:mb-36'>
+    <FeatureWrapper id={sectionsTitle[0]} className='container flex flex-col-reverse md:flex-row rounded-sm mx-auto border-1 border-gray overflow-visible h-auto md:h-96 mb-0 md:mb-64 lg:mb-48 xl:mb-36'>
         <FeaturesDescWrapper className='h-full w-full mt-4 py-36 md:py-0 md:w-1/2 flex flex-col items-start justify-center px-4 md:px-12'>
             <div className='text-xl md:text-base font-bold w-full md:w-11/12 mb-7'>{ StaticMessges.features.title }</div>
             <div className='w-11/12'>{ StaticMessges.features.description }</div>

@@ -15,7 +15,7 @@ function Home({ setSelectedSection}:HomeInt) {
 
     useEffect(() => {
         setSelectedSection(sectionsTitle[0])
-      }, [])
+      }, [setSelectedSection])
       
     return (
         <>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { companyDetails, medias } from '../../utilities/statics'
 
@@ -8,8 +9,8 @@ export default function Socials() {
             <span>Follow Us On:</span>
             <ul className='w-full flex '>
                 <li className='w-10 md:w-8 h-10 md:h-8'>
-                    <a target={'_blank'} href={companyDetails.socials.github}>
-                        <img className='w-full h-full' src={ medias.icons.gitHub } />
+                    <a target={'_blank'} href={companyDetails.socials.github} rel="noreferrer">
+                        <Image width={80} height={80} src={ medias.icons.gitHub } alt="github icon"/>
                     </a>
                 </li>
             </ul>

@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import { mediaQueries } from '../../utilities/configs'
 import { checkMinMaxMediaQuery } from '../../utilities/helper'
-import { routesList, routesTitle, sectionsTitle } from '../../utilities/statics'
+import { baseHomeSection, routesList, routesTitle, sectionsTitle } from '../../utilities/statics'
 import CloseIcon from './CloseIcon'
 import HamburgerMenuIcon from './HamburgerMenuIcon'
 import ResponsiveSidebar from './ResponsiveSidebar'
@@ -63,7 +64,7 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
     <HeaderWrapper isShowHeader={isShow} className='items-center p-4 sm:p-6 fixed top-0 left-0 w-full z-50'>
       <div className='container mx-auto flex justify-between items-center'>
         <div className='mr-auto font-bold'>
-          <Link className='text-xl sm:text-base' scroll={false} href={`/#${sectionsTitle[0]}`} >SCASS</Link>
+          <Link className='text-xl sm:text-base' scroll={false} href={`/#${baseHomeSection}`} >SCASS</Link>
         </div>
         
         <ul className="sectionWrapper hidden md:flex justify-around">
