@@ -17,4 +17,5 @@ export const LandingWrapper = styled.section`
 
 export const CodingDemoWrapper = styled.div`
     width: 30rem;
+    filter: hue-rotate(-135deg);
 `
