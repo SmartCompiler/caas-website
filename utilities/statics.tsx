@@ -203,7 +203,7 @@ export const roadmapData = [
             'Code advisor',
         ],
         ratioPosition: {
-            x: 3.6,
+            x: 3.1,
             y: 27
         },
         detailsPose: {
@@ -220,7 +220,7 @@ export const roadmapData = [
             'Compiler plugin package management'
         ],
         ratioPosition: {
-            x: 1.9,
+            x: 1.6,
             y: 12
         },
         detailsPose: {
@@ -235,11 +235,11 @@ export const roadmapData = [
             'Generate machine code for the Architecture on your choice'
         ],
         ratioPosition: {
-            x: 1.8,
-            y: 3.4
+            x: 1.5,
+            y: 3.2
         },
         detailsPose: {
-            left: -10,
+            left: 0,
             top: 15
         }
     },
@@ -254,11 +254,11 @@ export const roadmapData = [
             'Data science for user attraction and error coding'
         ],
         ratioPosition: {
-            x: 1.9,
-            y: 2.2
+            x: 1.55,
+            y: 2
         },
         detailsPose: {
-            left: -10,
+            left: 0,
             top: 15
         }
     },
@@ -271,8 +271,8 @@ export const roadmapData = [
             'Create plugin on partner artifactories'
         ],
         ratioPosition: {
-            x: 4.5,
-            y: 2.1
+            x: 4,
+            y: 2.05
         },
         detailsPose: {
             left: -240,
@@ -288,8 +288,8 @@ export const roadmapData = [
             'Binary as a function(BaaF)'
         ],
         ratioPosition: {
-            x: 5.5,
-            y: 3.5
+            x: 5,
+            y: 3
         },
         detailsPose: {
             left: -150,

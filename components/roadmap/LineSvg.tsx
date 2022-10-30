@@ -1,12 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { axisTypeObject } from '../../types'
 import { sphereConfigs } from '../../utilities/configs'
 import { SphereRectInt } from './SphereInfo'
 import { LineItem } from './style'
 
-type axisTypeObject = {
-    x: number,
-    y: number
-}
+
 export interface LineSvgInt {
     endPoint: axisTypeObject | undefined,
     sphereRect: SphereRectInt | undefined

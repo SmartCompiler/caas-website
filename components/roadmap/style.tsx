@@ -1,4 +1,14 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../utilities/configs";
+
+export const RoadmapSection = styled.section`
+    height: 50rem;
+
+    @media screen and (max-width: ${mediaQueries.xl}px) {
+        height: 55rem;
+
+    }
+`
 
 export const SphereContainer = styled.div`
     
@@ -43,4 +53,17 @@ export const RoadmapDetailItem = styled.div<WithPoseInt>`
     visibility: hidden;
     animation: fadeIn 1s linear forwards;
     animation-delay: 2s;
+
+  
+`
+
+export const DetailList = styled.li`
+    @media screen and (min-width: ${mediaQueries.lg2}px) {
+        width: 13rem;
+    }
+
+    @media screen and (min-width: ${mediaQueries.xl}px) {
+        width: 20rem;
+    }
+
 `

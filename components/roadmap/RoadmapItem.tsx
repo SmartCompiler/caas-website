@@ -1,7 +1,7 @@
 import React from 'react'
 import { roadmapData } from '../../utilities/statics'
 import LineSvg, { LineSvgInt } from './LineSvg'
-import { BulletNumber, RoadmapDetailItem } from './style'
+import { BulletNumber, DetailList, RoadmapDetailItem } from './style'
 
 interface RoadmapItemInt extends LineSvgInt{
     data: typeof roadmapData[number]
@@ -16,7 +16,7 @@ export default function RoadmapItem({data, endPoint, sphereRect, index}: Roadmap
         x: endPoint.x - sphereRect.left
     }
 
-    const descriptions = data.descriptions.map( (descItem, index) => <li className='whitespace-nowrap list-disc text-sm' key={'descItem_' + index}>{ descItem }</li>)
+    const descriptions = data.descriptions.map( (descItem, index) => <DetailList className='w-52 list-disc text-sm' key={'descItem_' + index}>{ descItem }</DetailList>)
     
       return (
         <>
