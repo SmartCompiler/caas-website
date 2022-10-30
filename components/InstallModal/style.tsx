@@ -28,7 +28,7 @@ export const ModalContainer = styled.div`
 
     @media screen and (max-width: ${mediaQueries.sm}px) {
         width: 90vw;
-        max-height: 90vh;
+        max-height: 86vh;
     }
 `
 

@@ -20,7 +20,7 @@ export default function InstallModal({ setIsModalOpen, isModalOpen }: InstallMod
 
   return (
     <ModalbackgroundWrapper className={`${isModalOpen ? 'flex': 'hidden'}`} onClick={() => setIsModalOpen(false)}>
-        <ModalContainer className='p-4 md:p-12 overflow-visible relative' onClick={e => e.stopPropagation()}>
+        <ModalContainer className='p-4 md:p-12 overflow-visible relative mt-header' onClick={e => e.stopPropagation()}>
             <CloseModal setIsModalOpen={setIsModalOpen} />
             <ModalTabsContainer className='flex justify-start items-start overflow-x-scroll md:overflow-hidden w-full'>
                 { tabs }

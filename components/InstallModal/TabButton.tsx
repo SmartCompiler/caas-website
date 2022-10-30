@@ -1,5 +1,5 @@
 import React from 'react'
-import { tabButtonTypes } from '.'
+import { tabButtonTypes } from '../../types'
 import { TabButtonItem } from './style'
 
 interface TabButton{
