@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -8,8 +8,15 @@ import Statistics from "../components/Statistics";
 import Vision from "../components/Vision";
 import { sectionsTitle } from "../utilities/statics";
 
-const Home: NextPage = () => {
+interface HomeInt {
+    setSelectedSection: React.Dispatch<React.SetStateAction<typeof sectionsTitle[number]>>
+}
+function Home({ setSelectedSection}:HomeInt) {
 
+    useEffect(() => {
+        setSelectedSection(sectionsTitle[0])
+      }, [])
+      
     return (
         <>
             <main className="overflow-x-hidden">

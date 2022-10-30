@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return <>
     <Header selectedSection={selectedSection} setSelectedSection={setSelectedSection} />
-    <Component {...pageProps} />
+    <Component setSelectedSection={setSelectedSection} {...pageProps} />
     <Footer selectedSection={selectedSection} setSelectedSection={setSelectedSection} />
   </>
 }

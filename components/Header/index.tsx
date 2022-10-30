@@ -11,7 +11,7 @@ import { useRouter } from 'next/router'
 
 interface HeaderInt {
   selectedSection: typeof sectionsTitle[number] 
-  setSelectedSection: React.Dispatch<React.SetStateAction<"Features" | "Vision" | "Contact Us">>
+  setSelectedSection: React.Dispatch<React.SetStateAction<typeof sectionsTitle[number]>>
 }
 
 export default function Header({selectedSection, setSelectedSection}: HeaderInt) {
@@ -30,13 +30,19 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
         window.removeEventListener('scroll', handleScrollWindow)
       })
     }, [lastScrollY])
-  
+
+    
     function handleScrollWindow() {
   
       if( window.scrollY > lastScrollY ) setIsShow(false)
       if( window.scrollY <= lastScrollY ) setIsShow(true)
       
       setLastScrollY(window.scrollY)
+
+      const hashUrl = window.location.hash.split('#').reverse()[0] as '' | typeof sectionsTitle[number]
+      if( !hashUrl || hashUrl === selectedSection ) return;
+      console.log(hashUrl, selectedSection);
+      setSelectedSection(hashUrl)
     }
 
     const buttonItem = sectionsTitle.map( (btnTitle, index) => (
@@ -48,9 +54,9 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
             itemTitle={btnTitle}
             routeName={routesList.home}
         >
-            <a
+            <Link
              onClick={ () => setSelectedSection(btnTitle)}
-             href={`${routesList.home}#${btnTitle}`} className="sectionButton">{ btnTitle }</a>
+             href={`${routesList.home}#${btnTitle}`} scroll={false} className="sectionButton">{ btnTitle }</Link>
         </HeaderBtnLi>
     ))
 
@@ -58,7 +64,10 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
     <>
     <HeaderWrapper isShowHeader={isShow} className='items-center p-4 sm:p-6 fixed top-0 left-0 w-full z-50'>
       <div className='container mx-auto flex justify-between items-center'>
-        <a onClick={ () => setSelectedSection(sectionsTitle[0])} href={`#${sectionsTitle[0]}`} className='text-xl sm:text-base mr-auto font-bold'>SCASS</a>
+        <div className='mr-auto'>
+          <Link className='text-xl sm:text-base  font-bold' scroll={false} href={`#${sectionsTitle[0]}`} >SCASS</Link>
+        </div>
+        
         <ul className="sectionWrapper hidden md:flex justify-around">
             <HeaderBtnLi routeName={routesList.roadmap} currentroute={router.pathname}>
               <Link href={routesList.roadmap}>{ routesTitle.roadmap }</Link>
