@@ -204,9 +204,12 @@ export const roadmapData = [
         ],
         ratioPosition: {
             x: 3.6,
-            y: 9.1
+            y: 27
         },
-        detailsPose: ['right']
+        detailsPose: {
+            left: 24,
+            top: -15
+        }
     },
     {
         title: 'Programming language',
@@ -217,10 +220,13 @@ export const roadmapData = [
             'Compiler plugin package management'
         ],
         ratioPosition: {
-            x: 1.8,
-            y: 8
+            x: 1.9,
+            y: 12
         },
-        detailsPose: ['right']
+        detailsPose: {
+            left: 24,
+            top: -15
+        }
     },
     {
         title: 'Binary and machine code generation',
@@ -229,10 +235,13 @@ export const roadmapData = [
             'Generate machine code for the Architecture on your choice'
         ],
         ratioPosition: {
-            x: 1.6,
+            x: 1.8,
             y: 3.4
         },
-        detailsPose: ['down', 'right']
+        detailsPose: {
+            left: -10,
+            top: 15
+        }
     },
     {
         title: 'Compiler intelligent',
@@ -245,10 +254,13 @@ export const roadmapData = [
             'Data science for user attraction and error coding'
         ],
         ratioPosition: {
-            x: 1.7,
+            x: 1.9,
             y: 2.2
         },
-        detailsPose: ['down', 'right']
+        detailsPose: {
+            left: -10,
+            top: 15
+        }
     },
     {
         title: 'Bin container and artifactory',
@@ -259,10 +271,13 @@ export const roadmapData = [
             'Create plugin on partner artifactories'
         ],
         ratioPosition: {
-            x: 4,
+            x: 4.5,
             y: 2.1
         },
-        detailsPose: ['down', 'left']
+        detailsPose: {
+            left: -240,
+            top: 15
+        }
     },
     {
         title: 'Cloud services',
@@ -273,9 +288,12 @@ export const roadmapData = [
             'Binary as a function(BaaF)'
         ],
         ratioPosition: {
-            x: 4.5,
-            y: 3
+            x: 5.5,
+            y: 3.5
         },
-        detailsPose: ['left']
+        detailsPose: {
+            left: -150,
+            top: -11
+        }
     }
 ]

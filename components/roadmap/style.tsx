@@ -21,11 +21,26 @@ export const LineItem = styled.line<LineItemInt>`
         }
 `
 
-interface BulletNumber{
+interface WithPoseInt{
     top: number
     left: number
 }
-export const BulletNumber = styled.span<BulletNumber>`
+export const BulletNumber = styled.span<WithPoseInt>`
     top: ${ props => props.top}px; 
     left: ${ props => props.left}px; 
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2s;
+
+`
+
+
+export const RoadmapDetailItem = styled.div<WithPoseInt>`
+    top: ${ props => props.top}px; 
+    left: ${ props => props.left}px; 
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2s;
 `

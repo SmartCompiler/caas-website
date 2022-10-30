@@ -103,17 +103,17 @@ export default function LineSvg({ endPoint, sphereRect }: LineSvgInt) {
     }
 
     function getThripleLineData(lineData: {x1:number, y1:number, x2:number,y2:number}, index:number){
-
+        const offsetToDivision = isEndPointOnTopSection ? 4 : 2
         if( index === 1 ){
             lineData.x1 = maxFirstLineXAxis
             lineData.y1 = maxFirstLineYAxis
             lineData.x2 = endPointBasedSvg.x
-            lineData.y2 = (endPointBasedSvg.y + maxFirstLineYAxis) / 2
+            lineData.y2 = (endPointBasedSvg.y + maxFirstLineYAxis) / offsetToDivision
         }
 
         if( index === 2 ){
             lineData.x1 = endPointBasedSvg.x 
-            lineData.y1 = (endPointBasedSvg.y + maxFirstLineYAxis) / 2
+            lineData.y1 = (endPointBasedSvg.y + maxFirstLineYAxis) / offsetToDivision
             lineData.x2 = endPointBasedSvg.x
             lineData.y2 = endPointBasedSvg.y
         }

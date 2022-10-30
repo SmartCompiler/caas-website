@@ -1,7 +1,7 @@
 import React from 'react'
 import { roadmapData } from '../../utilities/statics'
 import LineSvg, { LineSvgInt } from './LineSvg'
-import { BulletNumber } from './style'
+import { BulletNumber, RoadmapDetailItem } from './style'
 
 interface RoadmapItemInt extends LineSvgInt{
     data: typeof roadmapData[number]
@@ -12,19 +12,31 @@ export default function RoadmapItem({data, endPoint, sphereRect, index}: Roadmap
     if( !endPoint || !sphereRect  ) return<></>
 
     const endPointBasedSvg = {
-        y: endPoint.y - sphereRect.top - 10,
-        x: endPoint.x - sphereRect.left - 10
+        y: endPoint.y - sphereRect.top,
+        x: endPoint.x - sphereRect.left
     }
+
+    const descriptions = data.descriptions.map( (descItem, index) => <li className='whitespace-nowrap list-disc text-sm' key={'descItem_' + index}>{ descItem }</li>)
+    
       return (
         <>
             <BulletNumber 
                 className='absolute bg-white rounded-full w-5 h-5 text-black flex justify-center items-center font-bold z-10' 
-                left={endPointBasedSvg?.x} 
-                top={endPointBasedSvg?.y} 
+                left={endPointBasedSvg?.x - 10} 
+                top={endPointBasedSvg?.y - 10} 
                 >
                     { index }
             </BulletNumber>
-            <div></div>
+            <RoadmapDetailItem 
+                left={endPointBasedSvg?.x + data.detailsPose.left} 
+                top={endPointBasedSvg?.y + data.detailsPose.top } 
+                className='absolute flex flex-col justify-start items-start'
+                >
+                <div className='text-xl'>{ data.title }</div>
+                <ul className='pl-6'>
+                    { descriptions }
+                </ul>
+            </RoadmapDetailItem>
             <LineSvg endPoint={endPoint} sphereRect={sphereRect} />
         </>
       )
