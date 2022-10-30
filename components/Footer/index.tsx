@@ -13,7 +13,7 @@ export interface BaseFooterInt {
 export default function Footer({selectedSection, setSelectedSection}: BaseFooterInt) {
 
   return (
-    <FooterWrapper className='container mx-auto grid h-auto md:h-footer md:grid-rows-1 mt-10 px-4 pb-10 justify-around'>
+    <FooterWrapper className='container mx-auto grid h-auto md:h-footer md:grid-rows-1 mt-10 sm:mt-28 px-4 pb-10 justify-around'>
 
         <Details />
         

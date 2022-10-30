@@ -43,8 +43,8 @@ export default function SphereInfo() {
     
   return (
     <RoadmapSection className='mx-auto w-full overflow-visible relative hidden lg:flex justify-center items-center pt-header'>
-        <SphereContainer ref={sphereRef} className='flex justify-center items-center relative'>
-            <Image className='z-20 relative ' draggable={false} src={medias.sphere} alt="sphere core" width={370} height={370} />
+        <SphereContainer ref={sphereRef} className='flex justify-center items-center relative select-none'>
+            <Image className='z-20 relative' draggable={false} src={medias.sphere} alt="sphere core" width={370} height={370} />
             {renderedDescriptions}
         </SphereContainer>
     </RoadmapSection>

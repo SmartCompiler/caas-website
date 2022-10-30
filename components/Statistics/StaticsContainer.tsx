@@ -17,7 +17,7 @@ export default function StaticsContainer({ isVisited }:StatisticContainerInterfa
             />
     ))
   return (
-    <div className='container flex justify-start md:justify-around items-end flex-wrap md:flex-nowrap'>
+    <div className='container flex justify-start md:justify-around items-end flex-wrap md:flex-nowrap z-10'>
         { statisticItems }
     </div>
   )
