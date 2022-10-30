@@ -67,3 +67,7 @@ export const DetailList = styled.li`
     }
 
 `
+
+export const ResponsiveDesc = styled.div`
+    margin-top: -1.8rem;
+`
