@@ -19,13 +19,13 @@ export const routesTitle: {[key in keyof typeof routesList]: string} = {
 type sectionsArrayType = [
     'Features',
     'Vision',
-    'Contact Us'
+    'Statistics'
 ] 
 
 export const sectionsTitle:sectionsArrayType = [
     'Features',
     'Vision',
-    'Contact Us'
+    'Statistics'
 ] 
 
 export const companyDetails = {

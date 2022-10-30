@@ -33,7 +33,6 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
 
     
     function handleScrollWindow() {
-  
       if( window.scrollY > lastScrollY ) setIsShow(false)
       if( window.scrollY <= lastScrollY ) setIsShow(true)
       
@@ -41,7 +40,6 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
 
       const hashUrl = window.location.hash.split('#').reverse()[0] as '' | typeof sectionsTitle[number]
       if( !hashUrl || hashUrl === selectedSection ) return;
-      console.log(hashUrl, selectedSection);
       setSelectedSection(hashUrl)
     }
 
@@ -64,8 +62,8 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
     <>
     <HeaderWrapper isShowHeader={isShow} className='items-center p-4 sm:p-6 fixed top-0 left-0 w-full z-50'>
       <div className='container mx-auto flex justify-between items-center'>
-        <div className='mr-auto'>
-          <Link className='text-xl sm:text-base  font-bold' scroll={false} href={`#${sectionsTitle[0]}`} >SCASS</Link>
+        <div className='mr-auto font-bold'>
+          <Link className='text-xl sm:text-base' scroll={false} href={`/#${sectionsTitle[0]}`} >SCASS</Link>
         </div>
         
         <ul className="sectionWrapper hidden md:flex justify-around">
@@ -82,7 +80,7 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
         </div>
       </div>
     </HeaderWrapper>
-    <ResponsiveSidebar setSelectedSection={setSelectedSection} isOpen={isResponsiveOpen} currentSection={selectedSection} />
+    <ResponsiveSidebar selectedSection={selectedSection} setSelectedSection={setSelectedSection} isOpen={isResponsiveOpen} currentSection={selectedSection} />
     </>
   )
 }

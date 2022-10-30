@@ -8,7 +8,7 @@ import Subscriptions from './Subscriptions'
 
 export interface BaseFooterInt {
     selectedSection: typeof sectionsTitle[number] 
-    setSelectedSection: React.Dispatch<React.SetStateAction<"Features" | "Vision" | "Contact Us">>
+    setSelectedSection: React.Dispatch<React.SetStateAction<typeof sectionsTitle[number]>>
 }
 export default function Footer({selectedSection, setSelectedSection}: BaseFooterInt) {
 
