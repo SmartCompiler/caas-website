@@ -87,6 +87,7 @@ export const modalTabs:{ title: tabButtonTypes, component: JSX.Element}[] = [
 ]
 
 export const StaticMessges =  {
+    appTitle: "Smart Compiler Cass",
     global: {
         copyClipboad: 'copied to your clipboad'
     },
