@@ -13,7 +13,9 @@ export const mediaQueries = {
     lg2: 1210,
     xl: 1280,
     "2xl": 1536,
-    "3xl": 1800
+    "3xl": 1800,
+    "4xl": 2150,
+    "5xl": 2400
 }
 
 export const sphereConfigs = {
@@ -28,6 +30,8 @@ export const sphereConfigs = {
     },
     maxEndPointBasedOnScreenWidth: {
         screen: 1400,
+        "5xl": 550,
+        "4xl": 650,
         "3xl": 750,
         lg2X: 880,
         lgX: 930

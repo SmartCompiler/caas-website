@@ -55,13 +55,19 @@ function getMaxEndPoint() {
   let baseMaxXEndPoint =  sphereConfigs.maxEndPointBasedOnScreenWidth.lgX
   if(window.innerWidth > mediaQueries.lg2) baseMaxXEndPoint = sphereConfigs.maxEndPointBasedOnScreenWidth.lg2X
   if(window.innerWidth > mediaQueries['3xl']) baseMaxXEndPoint = sphereConfigs.maxEndPointBasedOnScreenWidth['3xl']
+  if(window.innerWidth > mediaQueries['4xl']) baseMaxXEndPoint = sphereConfigs.maxEndPointBasedOnScreenWidth['4xl']
+  if(window.innerWidth > mediaQueries['5xl']) baseMaxXEndPoint = sphereConfigs.maxEndPointBasedOnScreenWidth['5xl']
+
 
   return (window.innerWidth * baseMaxXEndPoint) / sphereConfigs.maxEndPointBasedOnScreenWidth.screen
 }
 
 function getEndPoints({bodyRect, ratio}:{bodyRect:DOMRect, ratio:axisTypeObject}, maxXEndPoint:number){
-  const XEndPoint = bodyRect.width / ratio.x
-  const YEndPoint = bodyRect.height / ratio.y
+  const xRatio = bodyRect.width > mediaQueries['4xl'] && ratio.x2 ? ratio.x2 : ratio.x
+  const yRatio = ratio.y
+
+  const XEndPoint = bodyRect.width / xRatio
+  const YEndPoint = bodyRect.height / yRatio
 
   return {
     x: XEndPoint > maxXEndPoint ? maxXEndPoint : XEndPoint,

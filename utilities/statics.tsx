@@ -217,6 +217,7 @@ export const roadmapData = [
         ],
         ratioPosition: {
             x: 3.1,
+            x2: 4,
             y: 27
         },
         detailsPose: {
