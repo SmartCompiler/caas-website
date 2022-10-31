@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import { mediaQueries } from "../../utilities/configs";
+import { base_url, mediaQueries } from "../../utilities/configs";
 import { medias } from "../../utilities/statics";
-
-const base_url = process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_SUB_DIR : ''
 
 const bg_image_url = base_url + '/landing.svg'
 console.log(bg_image_url);

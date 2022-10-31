@@ -1,5 +1,7 @@
 import { SphereRectInt } from "../components/roadmap/SphereInfo"
 
+export const base_url = process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_SUB_DIR : ''
+
 export const intersectionOption = {
     root: null,
     rootMargin: '0px',
