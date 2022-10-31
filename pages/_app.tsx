@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Head>
       <title>{ StaticMessges.appTitle }</title>
       <meta name="description" content="Smart Compiler Cass Website" />
-      <link rel="shortcut icon" href={`${process.env.NEXT_PUBLIC_FAVICON}/cass.png`} type="image/x-icon" />
+      <link rel="shortcut icon" href={`/cass.png`} type="image/x-icon" />
     </Head>
     <Header selectedSection={selectedSection} setSelectedSection={setSelectedSection} />
     <Component setSelectedSection={setSelectedSection} {...pageProps} />
