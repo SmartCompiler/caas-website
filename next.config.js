@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+
+const environment = process.env.NODE_ENV
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -6,8 +8,8 @@ const nextConfig = {
     loader: 'akamai',
     path: ''
   },
-  basePath: '/caas-website',
-  assetPrefix: '/caas-website'
+  basePath: environment === 'production' ? '/caas-website' : '',
+  assetPrefix: environment === 'production' ? '/caas-website' : '',
 }
 
 module.exports = nextConfig

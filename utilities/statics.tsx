@@ -1,3 +1,4 @@
+import Image from "next/image"
 import CommingSoon from "../components/InstallModal/CommingSoon"
 import InstallLinux from "../components/InstallModal/InstallLinux"
 import { tabButtonTypes } from "../types"
@@ -179,6 +180,14 @@ export const ModalInstallData = {
           description: 'To install SCAAS CLI tool run the following command.',
           code: <div><span className='mr-4'>$</span> sudo apt install scaas</div>,
           codeCopy: 'sudo apt install scaas'
+        },
+        {
+          title: 'Install by Snap',
+          description: (<a target={"_blank"} href="https://snapcraft.io/scaas" rel="noreferrer">
+                            <Image width={120} height={40} alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" />
+                        </a>),
+          code: <></>,
+          codeCopy: ''
         },
         {
           title: 'Step 3: Ensure everything is ok',
