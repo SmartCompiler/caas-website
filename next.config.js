@@ -8,8 +8,7 @@ const nextConfig = {
     loader: 'akamai',
     path: ''
   },
-  basePath: environment === 'production' ? '/caas-website' : '',
-  assetPrefix: environment === 'production' ? '/caas-website' : '',
+  basePath: environment === 'production' ? process.env.NEXT_PUBLIC_SUB_DIR : '',
 }
 
 module.exports = nextConfig
