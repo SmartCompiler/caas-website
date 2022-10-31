@@ -45,20 +45,21 @@ export const companyDetails = {
 } as const
 
 
+const image_prefixes = process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_BASE_URL : ''
 export const medias = {
     icons: {
-        gitHub:  '/icons/GitHub.svg',
-        cloud:  '/icons/cloud.svg',
-        advises:  '/icons/code-advises.svg',
-        optimization:  '/icons/optimization.svg',
-        versability:  '/icons/versability.svg'
+        gitHub: image_prefixes +  '/icons/GitHub.svg',
+        cloud: image_prefixes +  '/icons/cloud.svg',
+        advises: image_prefixes +  '/icons/code-advises.svg',
+        optimization: image_prefixes +  '/icons/optimization.svg',
+        versability: image_prefixes +  '/icons/versability.svg'
     },
-    landing: '/landing.svg',
-    landingCodeDemo: "/demo.gif",
-    features: '/features.svg',
-    vision: '/Vision.svg',
-    statistics: '/statistics.svg',
-    sphere: '/sphere.svg'
+    landing: image_prefixes + '/landing.svg',
+    landingCodeDemo: image_prefixes + "/demo.gif",
+    features: image_prefixes + '/features.svg',
+    vision: image_prefixes + '/Vision.svg',
+    statistics: image_prefixes + '/statistics.svg',
+    sphere: image_prefixes + '/sphere.svg'
 }
 
 export const modalTabs:{ title: tabButtonTypes, component: JSX.Element}[] = [
