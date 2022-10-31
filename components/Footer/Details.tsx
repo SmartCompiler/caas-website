@@ -2,7 +2,7 @@ import React from 'react'
 import { companyDetails } from '../../utilities/statics'
 
 export default function Details() {
-    const adresses = companyDetails.address.map( (adr, index) => (<div className='text-xs' key={`address_${index}`}> { adr }</div>))
+    const adresses = companyDetails.address.map( (adr, index) => (<div className='text-xs w-40 mt-2' key={`address_${index}`}> { adr }</div>))
 
     
   return (

@@ -42,7 +42,7 @@ export default function ResponsiveSidebar({isOpen, currentSection, setSelectedSe
         </li>
     ))
   return (
-    <ResponsiveSidebarWrapper isSidebarOpen={isOpen} className='fixed z-50 top-0 left-0 h-full w-4/6 bg-bg_dark flex p-4'>
+    <ResponsiveSidebarWrapper isSidebarOpen={isOpen} className='fixed md:hidden z-50 top-0 left-0 h-full w-4/6 bg-bg_dark flex p-4'>
         <ul className='flex flex-col justify-start items-start py-6'>
             <li className={`ml-4 mb-4 transition-all duration-75 ${ routesList.roadmap === router.pathname ? 'font-bold text-2xl' : 'text-xl'}`} >
                 <Link href={routesList.roadmap}>{ routesTitle.roadmap }</Link>

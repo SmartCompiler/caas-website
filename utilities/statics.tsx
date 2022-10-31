@@ -35,8 +35,7 @@ export const companyDetails = {
     tel: '123-456-789',
     email: 'info@mysite.com',
     address: [
-        '500 Terry Francios St',
-        'Sanfransisco, CA 94158'
+        'Raphis Court, 2 Hermitage Lane, London NW2 2FS'
     ],
     socials: {
         github: 'https://github.com/SmartCompiler'
