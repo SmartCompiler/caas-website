@@ -2,7 +2,6 @@ import Image from "next/image"
 import CommingSoon from "../components/InstallModal/CommingSoon"
 import InstallLinux from "../components/InstallModal/InstallLinux"
 import { tabButtonTypes } from "../types"
-import { base_url } from "./configs"
 
 interface routesListType {
     home:'/', 
@@ -48,18 +47,18 @@ export const companyDetails = {
 
 export const medias = {
     icons: {
-        gitHub: base_url + '/icons/GitHub.svg',
-        cloud: base_url + '/icons/cloud.svg',
-        advises: base_url + '/icons/code-advises.svg',
-        optimization: base_url + '/icons/optimization.svg',
-        versability: base_url + '/icons/versability.svg'
+        gitHub:  '/icons/GitHub.svg',
+        cloud:  '/icons/cloud.svg',
+        advises:  '/icons/code-advises.svg',
+        optimization:  '/icons/optimization.svg',
+        versability:  '/icons/versability.svg'
     },
-    landing: base_url + '/landing.svg',
-    landingCodeDemo: base_url + "/demo.gif",
-    features: base_url + '/features.svg',
-    vision: base_url + '/Vision.svg',
-    statistics: base_url + '/statistics.svg',
-    sphere: base_url + '/sphere.svg'
+    landing: '/landing.svg',
+    landingCodeDemo: "/demo.gif",
+    features: '/features.svg',
+    vision: '/Vision.svg',
+    statistics: '/statistics.svg',
+    sphere: '/sphere.svg'
 }
 
 export const modalTabs:{ title: tabButtonTypes, component: JSX.Element}[] = [
