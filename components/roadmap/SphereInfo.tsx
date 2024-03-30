@@ -1,12 +1,11 @@
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
-import Roadmap from '../../pages/roadmap'
 import { axisTypeObject } from '../../types'
 import { mediaQueries, sphereConfigs } from '../../utilities/configs'
 import { medias, roadmapData } from '../../utilities/statics'
-import LineSvg from './LineSvg'
 import RoadmapItem from './RoadmapItem'
 import { RoadmapSection, SphereContainer } from './style'
+import { initSphere } from '../3d-sphere/index.js';
 
 export interface SphereRectInt { 
   top:number,
@@ -16,6 +15,7 @@ export interface SphereRectInt {
 }
 export default function SphereInfo() {
     const sphereRef = useRef<HTMLDivElement>(null)
+    const isLoadedSphere = useRef(false);
     const [sphereRect, setSphereRect] = useState<SphereRectInt>()
     const [bodyRect, setBodyRect ] = useState<DOMRect>()
 
@@ -29,6 +29,13 @@ export default function SphereInfo() {
       setSphereRect({top: sphereRef.current?.offsetTop, left: sphereRef.current?.offsetLeft, width: sphereRef.current?.offsetWidth, height: sphereRef.current?.offsetHeight }) 
       
     }, [ bodyRect ])
+
+    useEffect(() => {
+      if (typeof window === 'undefined') return;
+      if (isLoadedSphere.current) return;
+      isLoadedSphere.current = true 
+      initSphere(sphereRef)
+    }, [])
     
     const renderedDescriptions = roadmapData.map((data, index) => {
         if(typeof window === 'undefined' || !bodyRect) return 
@@ -44,7 +51,7 @@ export default function SphereInfo() {
   return (
     <RoadmapSection className='mx-auto w-full overflow-visible relative hidden lg:flex justify-center items-center pt-header'>
         <SphereContainer ref={sphereRef} className='flex justify-center items-center relative select-none'>
-            <Image className='z-20 relative' draggable={false} src={medias.sphere} alt="sphere core" width={370} height={370} />
+            {/* <Image className='z-20 relative' draggable={false} src={medias.sphere} alt="sphere core" width={370} height={370} /> */}
             {renderedDescriptions}
         </SphereContainer>
     </RoadmapSection>
