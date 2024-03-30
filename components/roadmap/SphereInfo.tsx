@@ -6,6 +6,7 @@ import { medias, roadmapData } from '../../utilities/statics'
 import RoadmapItem from './RoadmapItem'
 import { RoadmapSection, SphereContainer } from './style'
 import { initSphere } from '../3d-sphere/index.js';
+import { onResizeCallback } from '../3d-sphere/render/init'
 
 export interface SphereRectInt { 
   top:number,
@@ -18,7 +19,6 @@ export default function SphereInfo() {
     const isLoadedSphere = useRef(false);
     const [sphereRect, setSphereRect] = useState<SphereRectInt>()
     const [bodyRect, setBodyRect ] = useState<DOMRect>()
-
     useEffect( () => {
       setBodyRect(document.body.getBoundingClientRect())
     }, [])
@@ -35,6 +35,10 @@ export default function SphereInfo() {
       if (isLoadedSphere.current) return;
       isLoadedSphere.current = true 
       initSphere(sphereRef)
+
+      return () => {
+        window.removeEventListener('resize', onResizeCallback)
+      }
     }, [])
     
     const renderedDescriptions = roadmapData.map((data, index) => {

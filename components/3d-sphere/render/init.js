@@ -20,6 +20,11 @@ let scene,
   renderAspectRatio
 const renderTickManager = new TickManager()
 
+export const onResizeCallback = () => {
+  camera.aspect = renderAspectRatio
+  camera.updateProjectionMatrix()
+  composer.setSize(renderWidth, renderHeight)
+}
 export const initEngine = async (sphereRef) => {
   scene = new Scene()
 
@@ -37,7 +42,6 @@ export const initEngine = async (sphereRef) => {
   // shadow
   renderer.shadowMap.enabled = true
   renderer.shadowMap.type = PCFSoftShadowMap
-  console.log(renderer.domElement)
   sphereRef.current.appendChild(renderer.domElement)
 
   const target = new WebGLRenderTarget(renderWidth, renderHeight, {
@@ -53,14 +57,10 @@ export const initEngine = async (sphereRef) => {
   controls.enableZoom = false
   controls.enablePan = false
 
+  
   window.addEventListener(
     'resize',
-    () => {
-      camera.aspect = renderAspectRatio
-      camera.updateProjectionMatrix()
-      composer.setSize(renderWidth, renderHeight)
-    },
-    false
+    onResizeCallback
   )
 
   renderTickManager.startLoop()

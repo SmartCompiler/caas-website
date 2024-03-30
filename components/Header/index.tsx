@@ -53,9 +53,10 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
             itemTitle={btnTitle}
             routeName={routesList.home}
         >
-            <Link
+            <a
+             rel='preload'
              onClick={ () => setSelectedSection(btnTitle)}
-             href={`${routesList.home}#${btnTitle}`} scroll={false} className="sectionButton">{ btnTitle }</Link>
+             href={`${routesList.home}#${btnTitle}`} className="sectionButton">{ btnTitle }</a>
         </HeaderBtnLi>
     ))
 
@@ -64,12 +65,12 @@ export default function Header({selectedSection, setSelectedSection}: HeaderInt)
     <HeaderWrapper isShowHeader={isShow} className='items-center p-4 sm:p-6 fixed top-0 left-0 w-full z-50'>
       <div className='container mx-auto flex justify-between items-center'>
         <div className='mr-auto font-bold'>
-          <Link className='text-xl sm:text-base' scroll={false} href={`/#${baseHomeSection}`} >SCASS</Link>
+          <a rel='preload' className='text-xl sm:text-base' href={`/#${baseHomeSection}`} >SCASS</a>
         </div>
         
         <ul className="sectionWrapper hidden md:flex justify-around">
             <HeaderBtnLi routeName={routesList.roadmap} currentroute={router.pathname}>
-              <Link href={routesList.roadmap}>{ routesTitle.roadmap }</Link>
+              <a rel='preload' href={routesList.roadmap}>{ routesTitle.roadmap }</a>
             </HeaderBtnLi>
 
             { buttonItem }
