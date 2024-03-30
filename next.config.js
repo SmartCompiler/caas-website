@@ -3,10 +3,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images:{
-    loader: 'akamai',
-    path: ''
-  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.glsl/,
