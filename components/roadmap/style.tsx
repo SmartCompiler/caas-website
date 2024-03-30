@@ -11,7 +11,8 @@ export const RoadmapSection = styled.section`
 `
 
 export const SphereContainer = styled.div`
-    
+    min-width: 370px;
+    min-height: 370px;
 `
 
 interface LineItemInt {

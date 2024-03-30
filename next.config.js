@@ -1,12 +1,19 @@
 /** @type {import('next').NextConfig} */
 
-const environment = process.env.NODE_ENV
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images:{
     loader: 'akamai',
     path: ''
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.glsl/,
+      type: "asset/source",
+    })
+    return config
+
   }
 }
 
