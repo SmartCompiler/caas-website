@@ -44,7 +44,7 @@ export const companyDetails = {
 } as const
 
 
-const image_prefixes = process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_BASE_URL : ''
+const image_prefixes = process.env.NODE_ENV !== 'production' ? process.env.NEXT_PUBLIC_BASE_URL : ''
 export const medias = {
     icons: {
         gitHub: image_prefixes +  '/icons/GitHub.svg',
