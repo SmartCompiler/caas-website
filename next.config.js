@@ -5,7 +5,7 @@ const nextConfig = {
   swcMinify: true,
   images:{
     loader: 'akamai',
-    path: process.env.NEXT_PUBLIC_BASE_URL
+    path: ""
   },
   webpack: (config) => {
     config.module.rules.push({
